@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing Executivo - Lex Energia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #10b981; /* Verde energia */
+            --accent-glow: rgba(16, 185, 129, 0.2);
+            --gold: #fbbf24;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        /* Nav/Header */
+        header {
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo i { color: var(--accent); }
+
+        .meta-info {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 100px 2rem 4rem 2rem;
+        }
+
+        /* Cover Section */
+        .cover {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-glow);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title i {
+            color: var(--accent);
+        }
+
+        /* Grid layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--surface-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: var(--surface-color);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .comparison th, .comparison td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .comparison th {
+            background: rgba(0,0,0,0.2);
+            font-weight: 600;
+            color: #fff;
+            width: 50%;
+        }
+
+        .comparison td:first-child {
+            color: #ef4444; /* red for old */
+        }
+        
+        .comparison td:last-child {
+            color: var(--accent); /* green for new */
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        /* Palette blocks */
+        .palette {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .color-box {
+            flex: 1;
+            height: 100px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Architecture Steps */
+        .step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            border: 1px solid var(--accent);
+        }
+
+        .step-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        .approval-box {
+            text-align: center;
+            background: linear-gradient(135deg, var(--surface-color), #0f172a);
+            padding: 4rem 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--accent);
+            margin-top: 4rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px var(--accent-glow);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="ph-fill ph-lightning"></i> LEX ENERGIA
+        </div>
+        <div class="meta-info">
+            Documento Confidencial<br>
+            <strong>Proposta de Reestruturação Digital</strong>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- COVER -->
+        <section class="cover">
+            <div>
+                <div class="tag">Projeto Estratégico</div>
+                <h1>A Nova Era da<br>Lex Energia.</h1>
+                <p class="subtitle">Briefing Executivo para a construção de uma plataforma de aquisição digital de alto desempenho, focada em conversão e autoridade no mercado de energia limpa.</p>
+            </div>
+        </section>
+
+        <!-- OBJECTIVES -->
+        <section>
+            <h2 class="section-title"><i class="ph-fill ph-target"></i> Objetivos de Negócio</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3><i class="ph-fill ph-funnel"></i> 1. Conversão Agressiva de Leads</h3>
+                    <p>Transformar visitantes em clientes pagantes com máxima eficiência, focando no principal gatilho do mercado: a redução imediata e sem atrito do custo de energia.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="ph-fill ph-users-three"></i> 2. Expansão de Parceiros</h3>
+                    <p>Criar um funil paralelo altamente persuasivo focado na captação de novos consultores, mostrando o mercado de energia como a melhor oportunidade de renda recorrente.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="ph-fill ph-shield-check"></i> 3. Confiança Institucional</h3>
+                    <p>Substituir a desconfiança comum ("isso é golpe?") por uma autoridade inquestionável, ancorando a marca aos selos da ANEEL, LGPD e grandes cases de mercado.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="ph-fill ph-trend-up"></i> 4. Performance em Tráfego Pago</h3>
+                    <p>A arquitetura será desenvolvida do zero para maximizar o ROI em campanhas do Meta Ads, Google Ads e TikTok Ads, com rastreamento perfeito e carregamento instantâneo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POSITIONING & AESTHETICS -->
+        <section>
+            <h2 class="section-title"><i class="ph-fill ph-palette"></i> Posicionamento Visual</h2>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                O novo design abandonará a estética comum de "site institucional corporativo" para adotar o posicionamento de uma <strong>Startup Financeira/Tech Bilionária</strong>. As referências diretas de UX/UI são marcas globais que transmitem sofisticação, simplicidade e inovação (Apple, Tesla, Nubank, Stripe).
+            </p>
+
+            <div class="grid-2">
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: #fff;">Diretrizes de Design</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-muted);">
+                        <li><i class="ph-bold ph-check text-accent" style="color: var(--accent); margin-right: 10px;"></i> Estética <strong>Dark Mode Premium</strong> (Cinematográfico)</li>
+                        <li><i class="ph-bold ph-check text-accent" style="color: var(--accent); margin-right: 10px;"></i> Elementos em <strong>Glassmorphism</strong> (Painéis de vidro translúcido)</li>
+                        <li><i class="ph-bold ph-check text-accent" style="color: var(--accent); margin-right: 10px;"></i> Micro-animações ativadas por rolagem da página</li>
+                        <li><i class="ph-bold ph-check text-accent" style="color: var(--accent); margin-right: 10px;"></i> Tipografia robusta focada em leitura e impacto</li>
+                        <li><i class="ph-bold ph-check text-accent" style="color: var(--accent); margin-right: 10px;"></i> Navegação focada no uso Mobile (Mobile-First)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: #fff;">Paleta de Cores</h4>
+                    <div class="palette">
+                        <div class="color-box" style="background: #0B0B0B; color: #fff;">#0B0B0B<br>Preto Profundo</div>
+                        <div class="color-box" style="background: #00D26A; color: #000;">#00D26A<br>Verde Energia</div>
+                        <div class="color-box" style="background: #D4AF37; color: #000;">#D4AF37<br>Dourado Premium</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE ARCHITECTURE -->
+        <section>
+            <h2 class="section-title"><i class="ph-fill ph-layout"></i> Arquitetura de Conversão</h2>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 3rem;">
+                A estrutura do site é desenhada como um <strong>funil de persuasão neurológica</strong>. Cada seção possui uma função específica para educar, gerar desejo e quebrar objeções.
+            </p>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Hero Section (A Promessa)</h4>
+                    <p>O primeiro contato visual do cliente. Teremos um background em vídeo de alta qualidade (casas modernas/tecnologia). A headline será direta ao ponto de dor: <em>"Pare de pagar caro na conta de luz."</em> Abaixo, os indicadores de credibilidade (120 usinas, R$380M economizados).</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Como Funciona (A Simplicidade)</h4>
+                    <p>Quebraremos a crença de que é um processo complexo através de uma timeline de 3 passos visuais: Enviar Conta -> Simulação -> Economia. Focaremos nos benefícios: Sem obras, sem taxas, sem fidelidade.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>O Simulador (A Interação)</h4>
+                    <p>O coração do sistema de captura de leads. Um formulário moderno que pede Nome, WhatsApp e Valor da conta. Ao submeter, uma animação simula o cálculo e revela o valor exato que o cliente deixará de pagar anualmente.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Recrutamento de Consultores (O Desejo)</h4>
+                    <p>Uma seção separada direcionada à oportunidade de negócios. Mostrará um "Dashboard" fictício muito bem desenhado simulando ganhos recorrentes caindo na conta de um consultor Lex, gerando urgência pela oportunidade.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>Prova Social & FAQ (A Razão)</h4>
+                    <p>A fase final do funil. Apresenta depoimentos no formato de avaliações 5 estrelas e um sanfona de perguntas frequentes para eliminar o medo (É golpe? Precisa instalar placas?).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXECUTION APPROVAL -->
+        <section class="approval-box">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">Pronto para iniciar a revolução?</h2>
+            <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                Este escopo transformará a Lex Energia na referência estética e de conversão do mercado brasileiro. Ao aprovar, o desenvolvimento técnico (Frontend e Lógica) terá início imediato baseando-se nestas diretrizes.
+            </p>
+            <a href="#" class="btn" onclick="alert('Excelente! Podemos proceder com a execução técnica que já está desenhada.')">APROVAR E INICIAR DESENVOLVIMENTO</a>
+        </section>
+
+    </div>
+
+</body>
+</html>

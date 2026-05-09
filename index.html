@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lex Energia - Pare de pagar caro na conta de luz</title>
+    <meta name="description"
+        content="Economize até 40% todos os meses com energia limpa, sem instalar placas solares e sem mudar sua rotina.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="ph-fill ph-lightning" style="color: var(--primary);"></i>
+                <span>LEX</span> ENERGIA
+            </div>
+            <div class="nav-links">
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#parceiros">Seja Consultor</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#simulador" class="btn-primary-sm">Simular Desconto</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5541997520906?text=Ol%C3%A1,%20gostaria%20de%20entender%20como%20economizar%20com%20a%20Lex%20Energia!"
+        target="_blank" class="float-wa" aria-label="Fale conosco no WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Header / Hero Section -->
+    <header class="hero" id="inicio">
+        <!-- Background Video (Simulated with CSS gradient + noise or actual video placeholder) -->
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline class="bg-video">
+                <!-- Using a tech abstract video placeholder -->
+                <source
+                    src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-network-connections-background-27660-large.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="bg-overlay"></div>
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge fade-up">
+                <i class="ph-fill ph-leaf"></i> Energia 100% Limpa e Renovável
+            </div>
+            <h1 class="fade-up" style="animation-delay: 0.1s;">Pare de pagar <span class="text-gradient">caro</span> na
+                conta de luz.</h1>
+            <p class="fade-up" style="animation-delay: 0.2s;">
+                Economize até 40% todos os meses com energia limpa, <strong>sem instalar placas solares</strong> e sem
+                mudar sua rotina.
+            </p>
+            <div class="hero-cta fade-up" style="animation-delay: 0.3s;">
+                <a href="https://lex.energiacom.vc/5CKMUYQ" target="_blank" class="btn-primary">
+                    ACESSAR DESCONTO AGORA <i class="ph-bold ph-lightning"></i>
+                </a>
+                <a href="https://lex.energiacom.vc/create/5CKMUYQ" target="_blank" class="btn-secondary">
+                    QUERO TRABALHAR COM A LEX
+                </a>
+            </div>
+
+            <!-- Indicators -->
+            <div class="hero-stats fade-up" style="animation-delay: 0.5s;">
+                <div class="stat-item">
+                    <span class="stat-value" data-target="120">+0</span>
+                    <span class="stat-label">Usinas no Brasil</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Cobertura Nacional</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" data-target="380">+R$ 0M</span>
+                    <span class="stat-label">Economizados</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Logo Ticker / Trust -->
+    <section class="trust-logos">
+        <p class="trust-title">Empresas que confiam na transição energética</p>
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                <!-- Repeated for infinite scroll effect -->
+                <span>MERCADO LIVRE</span>
+                <span>NUBANK</span>
+                <span>TESLA</span>
+                <span>APPLE</span>
+                <span>STRIPE</span>
+                <span>MERCADO LIVRE</span>
+                <span>NUBANK</span>
+                <span>TESLA</span>
+                <span>APPLE</span>
+                <span>STRIPE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estrategic Video Section (VSL) -->
+    <section class="video-section" id="video-explicativo">
+        <div class="section-container">
+            <div class="video-wrapper glass-panel reveal" style="padding: 3rem;">
+
+                <div class="video-header text-center" style="margin-bottom: 2rem;">
+                    <div class="badge-text text-primary" style="margin-bottom: 1rem; display: inline-block;">Aperte o
+                        Play</div>
+                    <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.03em;">
+                        Entenda a <span class="text-gradient">revolução</span> em 1 minuto</h2>
+                    <p
+                        style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        Descubra como grandes empresas e residências estão zerando suas preocupações com a conta de luz
+                        sem instalar nenhuma placa solar.</p>
+                </div>
+
+                <div class="video-container vturb-container"
+                    style="position: relative; width: 100%; border-radius: 16px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border: 2px solid var(--glass-border); overflow: hidden; background: #000; cursor: pointer;"
+                    onclick="playVturbVideo(this)">
+
+                    <!-- VTurb Overlay -->
+                    <div class="vturb-overlay"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; z-index: 10; background: rgba(0,0,0,0.1);">
+                        <div class="vturb-play-btn">
+                            <i class="ph-fill ph-play"></i>
+                        </div>
+                    </div>
+
+                    <video id="main-vsl" width="100%" style="display: block;" autoplay muted loop playsinline
+                        preload="metadata">
+                        <source src="./assets/video_explicativo.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="https://lex.energiacom.vc/5CKMUYQ" target="_blank" class="btn-primary"
+                        style="font-size: 1.3rem; padding: 1.2rem 2.5rem; animation: pulse-vturb 2.5s infinite;">
+                        ACESSAR DESCONTO AGORA <i class="ph-bold ph-lightning"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2>Como a <span class="text-gradient">mágica</span> acontece</h2>
+                <p>O processo mais simples que você já viu. Sem burocracia, sem obras.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon">
+                        <i class="ph-bold ph-file-text"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>1. Envie sua conta de luz</h3>
+                        <p>Basta nos enviar uma foto ou PDF da sua conta de energia atual. É tudo o que precisamos para
+                            começar.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-connector"></div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon">
+                        <i class="ph-bold ph-calculator"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2. Receba sua simulação</h3>
+                        <p>Nossa inteligência artificial calcula exatamente quanto você vai economizar por mês e por
+                            ano.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-connector"></div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon">
+                        <i class="ph-bold ph-piggy-bank"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>3. Comece a economizar</h3>
+                        <p>Aprovado? O desconto já vem na sua próxima fatura. A concessionária continua a mesma, mas a
+                            energia é injetada pelas nossas usinas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid reveal">
+                <div class="feature-card glass-panel">
+                    <i class="ph-fill ph-check-circle text-primary"></i>
+                    <h4>Sem Instalação</h4>
+                    <p>Você não precisa comprar painéis solares ou fazer obras.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <i class="ph-fill ph-check-circle text-primary"></i>
+                    <h4>Sem Taxas</h4>
+                    <p>Adesão 100% gratuita. Você só paga pela energia que consumir, com desconto.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <i class="ph-fill ph-check-circle text-primary"></i>
+                    <h4>Sem Fidelidade</h4>
+                    <p>Você é livre. Se quiser cancelar, basta solicitar sem multas absurdas.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <i class="ph-fill ph-check-circle text-primary"></i>
+                    <h4>Mesmo Fornecimento</h4>
+                    <p>Quem entrega a energia na sua casa continua sendo a concessionária local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority / Trust Deep Dive -->
+    <section class="authority-section">
+        <div class="authority-bg">
+            <div class="glow-orb orb-3"></div>
+        </div>
+        <div class="section-container">
+            <div class="authority-content reveal">
+                <h2>Segurança institucional nível <span class="text-gold">Bilionário</span></h2>
+                <p>Nossa infraestrutura energética é regulamentada e estruturada com máxima segurança jurídica e
+                    tecnológica.</p>
+
+                <div class="badges-grid">
+                    <div class="badge-item glass-panel">
+                        <i class="ph-fill ph-shield-check"></i>
+                        <span>Regulamentado pela ANEEL</span>
+                    </div>
+                    <div class="badge-item glass-panel">
+                        <i class="ph-fill ph-lock-key"></i>
+                        <span>100% Adequado à LGPD</span>
+                    </div>
+                    <div class="badge-item glass-panel">
+                        <i class="ph-fill ph-file-dashed"></i>
+                        <span>Contrato Digital Criptografado</span>
+                    </div>
+                    <div class="badge-item glass-panel">
+                        <i class="ph-fill ph-bank"></i>
+                        <span>Solidez Financeira Comprovada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulation Form Section -->
+    <section class="simulator-section" id="simulador">
+        <div class="section-container">
+            <div class="simulator-wrapper glass-panel reveal">
+                <div class="simulator-info">
+                    <h2>Descubra sua <span class="text-gradient">economia</span> em 30 segundos</h2>
+                    <p>Preencha os dados e receba uma análise precisa e em tempo real do quanto você vai deixar de pagar
+                        para a concessionária todos os anos.</p>
+
+                    <div class="sim-benefits">
+                        <div class="sim-ben-item">
+                            <i class="ph-bold ph-check text-primary"></i> 100% Gratuito
+                        </div>
+                        <div class="sim-ben-item">
+                            <i class="ph-bold ph-check text-primary"></i> Sem compromisso
+                        </div>
+                        <div class="sim-ben-item">
+                            <i class="ph-bold ph-check text-primary"></i> Análise em tempo real
+                        </div>
+                    </div>
+                </div>
+
+                <div class="simulator-form">
+                    <form id="sim-form" onsubmit="event.preventDefault(); simulateEconomy();">
+                        <div class="form-group">
+                            <label>Nome Completo</label>
+                            <input type="text" placeholder="Ex: João da Silva" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>WhatsApp</label>
+                                <input type="tel" placeholder="(00) 00000-0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Cidade / UF</label>
+                                <input type="text" placeholder="Ex: São Paulo / SP" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Valor Médio da Conta (R$)</label>
+                            <input type="number" id="bill-value" placeholder="Ex: 500" required>
+                        </div>
+                        <div class="form-group file-upload">
+                            <label>Upload da Conta (Opcional, mas recomendado)</label>
+                            <div class="file-drop-area">
+                                <i class="ph-bold ph-upload-simple"></i>
+                                <span>Arraste ou clique para enviar foto/PDF</span>
+                                <input type="file" accept=".pdf,image/*">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">
+                            GERAR SIMULAÇÃO <i class="ph-bold ph-magic-wand"></i>
+                        </button>
+                    </form>
+
+                    <!-- Results view (Hidden initially) -->
+                    <div id="sim-result" class="sim-result hidden">
+                        <h3>Sua economia estimada</h3>
+                        <div class="result-number">
+                            <span class="currency">R$</span>
+                            <span id="monthly-saving" class="value">0</span>
+                            <span class="period">/mês</span>
+                        </div>
+                        <div class="yearly-saving">
+                            Isso significa <strong>R$ <span id="yearly-saving">0</span></strong> a mais no seu bolso
+                            todo ano.
+                        </div>
+                        <p class="result-desc">O que você faria com esse dinheiro sobrando?</p>
+                        <a href="https://lex.energiacom.vc/5CKMUYQ" target="_blank" class="btn-primary w-100"
+                            style="margin-top: 1rem; text-decoration: none; display: flex;">
+                            QUERO GARANTIR MEU DESCONTO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Recruitment Section -->
+    <section class="partners-section" id="parceiros">
+        <div class="section-container">
+            <div class="partners-grid">
+                <div class="partners-image reveal"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Descubra como ter o <span
+                            class="text-gradient">desconto</span></h3>
+                    <!-- Video for Partners (Short Style) -->
+                    <div
+                        style="position: relative; width: 280px; height: 500px; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); border: 2px solid var(--glass-border); overflow: hidden; margin-bottom: 1.5rem;">
+                        <video width="100%" height="100%" controls style="display: block; object-fit: cover;">
+                            <source src="./assets/video_vsl.mp4" type="video/mp4">
+                            Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </div>
+                    <a href="https://lex.energiacom.vc/5CKMUYQ" target="_blank" class="btn-primary"
+                        style="width: 280px;">
+                        GARANTIR DESCONTO <i class="ph-bold ph-lightning"></i>
+                    </a>
+                </div>
+                <div class="partners-content reveal">
+                    <div class="badge-text text-gold">Plano de Carreira</div>
+                    <h2>Transforme contas de luz em <span class="text-gradient">renda recorrente.</span></h2>
+                    <p>O mercado de energia limpa é o que mais cresce no mundo. Torne-se um consultor Lex Energia e
+                        ganhe dinheiro toda vez que seus clientes pagarem a conta de luz.</p>
+
+                    <ul class="partner-benefits">
+                        <li><i class="ph-bold ph-infinity"></i> Ganhos recorrentes mensais</li>
+                        <li><i class="ph-bold ph-laptop"></i> Trabalho 100% digital (pelo celular)</li>
+                        <li><i class="ph-bold ph-wallet"></i> Baixo ou nenhum custo inicial</li>
+                        <li><i class="ph-bold ph-chart-line-up"></i> Mercado bilionário e inexplorado</li>
+                    </ul>
+
+                    <a href="https://lex.energiacom.vc/create/5CKMUYQ" target="_blank" class="btn-primary"
+                        style="margin-top: 2rem;">
+                        QUERO SER CONSULTOR <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof" id="prova-social">
+        <div class="section-container">
+
+            <!-- Mídia / Globo -->
+            <div class="section-header reveal" style="margin-bottom: 3rem;">
+                <div class="badge-text text-gold" style="margin-bottom: 1rem; display: inline-block;"><i
+                        class="ph-fill ph-television"></i> Reconhecimento Nacional</div>
+                <h2>A revolução foi parar na <span class="text-gradient">Rede Globo</span></h2>
+                <p>Veja a reportagem especial sobre como o modelo de energia da Alexandria está mudando o mercado
+                    brasileiro.</p>
+            </div>
+
+            <div class="media-video-container reveal glass-panel vturb-container"
+                style="max-width: 900px; margin: 0 auto 6rem auto; padding: 0; border-radius: 16px; box-shadow: 0 15px 50px rgba(0,0,0,0.6); overflow: hidden; cursor: pointer; background: #000;"
+                onclick="playVturbVideo(this)">
+                <div
+                    style="background: rgba(255,255,255,0.02); padding: 1rem 1.5rem; border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+                    <span
+                        style="font-size: 0.8rem; color: var(--text-muted); font-family: monospace; margin-left: 1rem;">reportagem_especial_globo.mp4</span>
+                </div>
+
+                <div style="position: relative;">
+                    <!-- VTurb Overlay -->
+                    <div class="vturb-overlay"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; z-index: 10; background: rgba(0,0,0,0.1);">
+                        <div class="vturb-play-btn">
+                            <i class="ph-fill ph-play"></i>
+                        </div>
+                    </div>
+                    <video width="100%" style="display: block;" autoplay muted loop playsinline preload="metadata">
+                        <source src="./assets/video_midia.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: -2rem; margin-bottom: 5rem;">
+                <a href="https://lex.energiacom.vc/5CKMUYQ" target="_blank" class="btn-primary"
+                    style="font-size: 1.5rem; padding: 1.5rem 3rem; box-shadow: 0 10px 30px rgba(0, 210, 106, 0.4);">
+                    ACESSAR DESCONTO AGORA <i class="ph-bold ph-lightning"></i>
+                </a>
+                <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem;"><i
+                        class="ph-fill ph-shield-check" style="color: var(--primary);"></i> Assinatura 100% segura,
+                    gratuita e regulamentada pela ANEEL</p>
+            </div>
+
+            <!-- Depoimentos -->
+            <div class="section-header reveal">
+                <h2>Milhares de brasileiros já estão <span class="text-gradient">economizando</span></h2>
+            </div>
+
+            <div class="testimonials-grid reveal">
+                <div class="testimonial-card glass-panel">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>"Eu não acreditava no início, achei que era golpe. Mas o desconto veio já na fatura seguinte da
+                        Cemig. Economizo quase R$ 200 por mês agora."</p>
+                    <div class="user-info">
+                        <div class="initial">R</div>
+                        <div>
+                            <strong>Ricardo M.</strong>
+                            <span>Belo Horizonte, MG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-panel">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>"O processo foi rápido, pelo WhatsApp. Mandei a conta da minha padaria e reduziram meu custo em
+                        30%. Pra comércio faz muita diferença no ano!"</p>
+                    <div class="user-info">
+                        <div class="initial">C</div>
+                        <div>
+                            <strong>Carlos S.</strong>
+                            <span>São Paulo, SP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-panel">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>"Gosto de saber que estou consumindo energia limpa e ainda pagando menos. Atendimento impecável,
+                        me explicaram tudo certinho."</p>
+                    <div class="user-info">
+                        <div class="initial">A</div>
+                        <div>
+                            <strong>Ana L.</strong>
+                            <span>Curitiba, PR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: 4rem;">
+                <a href="https://lex.energiacom.vc/5CKMUYQ" target="_blank" class="btn-primary"
+                    style="font-size: 1.5rem; padding: 1.5rem 3rem; animation: pulse-vturb 2.5s infinite;">
+                    ACESSAR DESCONTO AGORA <i class="ph-bold ph-lightning"></i>
+                </a>
+                <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem;">Junte-se a milhares de
+                    brasileiros economizando a partir de hoje.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2>Perguntas <span class="text-gradient">Frequentes</span></h2>
+                <p>Tudo o que você precisa saber antes de começar a economizar.</p>
+            </div>
+
+            <div class="faq-accordion reveal">
+                <div class="faq-item">
+                    <button class="faq-question">É golpe? É seguro? <i class="ph-bold ph-caret-down"></i></button>
+                    <div class="faq-answer">
+                        <p>É 100% seguro e regulamentado pela ANEEL (Agência Nacional de Energia Elétrica) através da
+                            Lei nº 14.300/2022. Somos uma empresa consolidada gerando economia real todos os meses para
+                            milhares de brasileiros.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Preciso instalar placas solares na minha casa? <i
+                            class="ph-bold ph-caret-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Não! Nossas usinas geram a energia e injetam diretamente na rede da concessionária. Você
+                            recebe os créditos na sua fatura sem precisar de nenhuma obra, instalação ou investimento.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Vou ficar sem energia se chover? <i
+                            class="ph-bold ph-caret-down"></i></button>
+                    <div class="faq-answer">
+                        <p>De forma alguma. A energia continua sendo entregue pelos mesmos cabos da sua concessionária
+                            atual (Enel, Cemig, CPFL, etc). A distribuição e a estabilidade não mudam.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Posso cancelar depois se eu não gostar? <i
+                            class="ph-bold ph-caret-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Sim! Você não tem fidelidade abusiva conosco. Se quiser voltar ao modelo tradicional pagando
+                            mais caro, basta solicitar o cancelamento através dos nossos canais de atendimento,
+                            respeitando o aviso prévio mínimo da regulamentação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="ph-fill ph-lightning" style="color: var(--primary);"></i>
+                        <span>LEX</span> ENERGIA
+                    </div>
+                    <p>O futuro da energia é limpo, renovável e mais barato. Junte-se à revolução verde com a Lex
+                        Energia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <a href="#como-funciona">Como Funciona</a>
+                    <a href="#simulador">Simulador</a>
+                    <a href="#parceiros">Seja Consultor</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Contrato Digital</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="ph-fill ph-whatsapp-logo"></i> (41) 99752-0906</p>
+                    <p><i class="ph-fill ph-envelope"></i> contato@lexenergia.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lex Energia. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
