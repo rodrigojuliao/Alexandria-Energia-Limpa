@@ -59,16 +59,16 @@
             <div class="glow-orb orb-2"></div>
         </div>
 
-        <div class="hero-container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 2rem; z-index: 1; flex-wrap: wrap;">
-            <div class="hero-content" style="flex: 1; min-width: 300px; text-align: left; padding: 0; margin: 0;">
+        <div class="hero-container">
+            <div class="hero-content">
                 <div class="hero-badge fade-up">
                     <i class="ph-fill ph-leaf"></i> Energia 100% Limpa e Renovável
                 </div>
-                <h1 class="fade-up" style="animation-delay: 0.1s; font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.03em;">Pare de pagar <span class="text-gradient">caro</span> na conta de luz.</h1>
-                <p class="fade-up" style="animation-delay: 0.2s; font-size: 1.25rem; color: var(--text-muted); margin-bottom: 3rem; margin-left: 0; margin-right: 0; max-width: none;">
+                <h1 class="fade-up" style="animation-delay: 0.1s;">Pare de pagar <span class="text-gradient">caro</span> na conta de luz.</h1>
+                <p class="fade-up" style="animation-delay: 0.2s;">
                     Economize até 40% todos os meses com energia limpa, <strong>sem instalar placas solares</strong> e sem mudar sua rotina.
                 </p>
-                <div class="hero-cta fade-up" style="animation-delay: 0.3s; justify-content: flex-start;">
+                <div class="hero-cta fade-up" style="animation-delay: 0.3s;">
                     <a href="https://lex.energiacom.vc/5CKMUYQ" target="_blank" class="btn-primary">
                         ACESSAR DESCONTO AGORA <i class="ph-bold ph-lightning"></i>
                     </a>
@@ -78,30 +78,25 @@
                 </div>
 
                 <!-- Indicators -->
-                <div class="hero-stats fade-up" style="animation-delay: 0.5s; justify-content: flex-start; background: transparent; padding: 0; border: none; backdrop-filter: none; gap: 2rem;">
-                    <div class="stat-item" style="align-items: flex-start;">
-                        <span class="stat-value" data-target="120" style="font-size: 2rem;">+0</span>
+                <div class="hero-stats fade-up" style="animation-delay: 0.5s;">
+                    <div class="stat-item">
+                        <span class="stat-value" data-target="120">+0</span>
                         <span class="stat-label">Usinas no Brasil</span>
                     </div>
                     <div class="stat-divider"></div>
-                    <div class="stat-item" style="align-items: flex-start;">
-                        <span class="stat-value" style="font-size: 2rem;">100%</span>
+                    <div class="stat-item">
+                        <span class="stat-value">100%</span>
                         <span class="stat-label">Cobertura Nacional</span>
                     </div>
                     <div class="stat-divider"></div>
-                    <div class="stat-item" style="align-items: flex-start;">
-                        <span class="stat-value" data-target="380" style="font-size: 2rem;">+R$ 0M</span>
+                    <div class="stat-item">
+                        <span class="stat-value" data-target="380">+R$ 0M</span>
                         <span class="stat-label">Economizados</span>
                     </div>
                 </div>
             </div>
 
-            <div class="hero-video-wrapper fade-up" style="flex: 1; min-width: 300px; display: flex; justify-content: center; align-items: center; animation-delay: 0.4s;">
-                <video autoplay muted loop playsinline style="width: 100%; max-width: 450px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 0 1px var(--glass-border); object-fit: cover;">
-                    <source src="./assets/hero_video.mp4" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo.
-                </video>
-            </div>
+
         </div>
     </header>
 
@@ -593,6 +588,8 @@
             </div>
         </div>
     </footer>
+    <!-- Floating Notifications System -->
+    <div id="notification-container" class="notification-container"></div>
 
     <script src="./js/script.js"></script>
 </body>

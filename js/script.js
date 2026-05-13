@@ -193,3 +193,79 @@ function playVturbVideo(containerElement) {
         containerElement.onclick = null;
     }
 }
+
+// Floating Notifications Logic (Social Proof)
+document.addEventListener('DOMContentLoaded', () => {
+    const notificationContainer = document.getElementById('notification-container');
+    if (!notificationContainer) return;
+
+    const names = ["Carlos", "Fernanda", "Juliana", "Rafael", "Amanda", "Lucas", "Mariana", "Roberto", "Beatriz", "Diego", "Camila", "Rodrigo", "Letícia", "Bruno", "Patricia", "Eduardo", "Carolina"];
+    const cities = ["de Curitiba", "de Londrina", "de Maringá", "de São José dos Pinhais", "de Campinas", "de São Paulo", "do Rio de Janeiro", "de Belo Horizonte", "de Porto Alegre", "de Florianópolis", "de Goiânia", "de Brasília", "de Salvador", "de Fortaleza", "do Recife"];
+    const actions = [
+        "acabou de solicitar análise da conta de luz",
+        "acabou de se cadastrar",
+        "enviou a conta de energia",
+        "garantiu sua simulação",
+        "iniciou o cadastro",
+        "recebeu sua simulação gratuita",
+        "aprovou o desconto na fatura"
+    ];
+
+    let lastIndexData = { name: -1, city: -1, action: -1 };
+
+    function getRandomItem(array, lastIndexKey) {
+        let newIndex;
+        do {
+            newIndex = Math.floor(Math.random() * array.length);
+        } while (newIndex === lastIndexData[lastIndexKey] && array.length > 1);
+        lastIndexData[lastIndexKey] = newIndex;
+        return array[newIndex];
+    }
+
+    function createNotification() {
+        const name = getRandomItem(names, 'name');
+        const city = getRandomItem(cities, 'city');
+        const action = getRandomItem(actions, 'action');
+
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        
+        toast.innerHTML = `
+            <div class="toast-icon">
+                <i class="ph-bold ph-check"></i>
+            </div>
+            <div class="toast-content">
+                <div class="toast-title">${name} ${city}</div>
+                <div class="toast-message">${action}</div>
+            </div>
+        `;
+
+        notificationContainer.appendChild(toast);
+
+        // Force a reflow to trigger CSS transitions
+        void toast.offsetWidth;
+
+        // Animate In
+        toast.classList.add('show');
+
+        // Remove after 4 seconds (4000ms)
+        setTimeout(() => {
+            toast.classList.remove('show');
+            toast.classList.add('hide');
+            
+            // Remove from DOM after transition finishes (500ms)
+            setTimeout(() => {
+                if (toast.parentNode === notificationContainer) {
+                    notificationContainer.removeChild(toast);
+                }
+            }, 500);
+        }, 4000);
+    }
+
+    // Start generating notifications after initial delay
+    setTimeout(() => {
+        createNotification();
+        // Generate a new one every 5 seconds
+        setInterval(createNotification, 5000);
+    }, 3000); // 3 seconds before the first one appears
+});
